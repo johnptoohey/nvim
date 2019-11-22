@@ -35,6 +35,7 @@ set clipboard=unnamedplus
 "set colorcolumn=81                " highlight the 80th column as an indicator
 
 nnoremap <silent> vv <C-w>v       " Bind vv to vertical split 
+nnoremap <silent> hh :sp <CR>     " Bind hh to horz split 
 
 set completeopt-=preview          " remove the horrendous preview window
 set cursorline                    " highlight the current line for the cursor
@@ -176,8 +177,8 @@ nnoremap q: :CmdHist<CR>
 command! QHist call fzf#vim#search_history({'right': '40'})
 nnoremap q/ :QHist<CR>
 nmap ; :Buffers<CR>
-nmap <Leader>t :Files<CR>
-nmap <Leader>r :Tags<CR>
+nmap <Leader>f :Files<CR>
+nmap <Leader>r :Rg<CR>
 " This is the default extra key bindings
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',

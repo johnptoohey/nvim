@@ -1,10 +1,15 @@
+if (has("termguicolors"))
+ set termguicolors
+endif
 
-let g:iceberg_italic = 1
-let g:iceberg_italic_comments = 1
-colorscheme iceberg 
-let g:palenight_italic_comments = 1
+" Theme
+syntax enable
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+colorscheme OceanicNext
+
 set background=dark
-":let g:airline.colorscheme = 'palenight'
+"let g:airline.colorscheme = 'palenight'
 
 "autocmd ColorScheme * hi Comment gui=italic cterm=italic
 "autocmd ColorScheme * hi LineNr guifg=#737373 ctermfg=249

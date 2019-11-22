@@ -4,18 +4,13 @@ let mapleader=","
 let maplocalleader=","
 
 " shortcut plugin needs to be included for some reason. Weird!
-source ~/.config/nvim/shortcut.vim
+source ~/.local/share/nvim/plugged/vim-shortcut/plugin/shortcut.vim
 
 if exists('g:loaded_shortcut')
   Shortcut show shortcut menu and run chosen shortcut noremap <silent> <Leader><Leader> :Shortcuts<Return>
-"  Shortcut fallback to shortcut menu on partial entry noremap <silent> <Leader> :Shortcuts<Return>
-"  Shortcut fallback to shortcut menu on partial entry noremap <silent> <LocalLeader> :Shortcuts<Return>
+  Shortcut fallback to shortcut menu on partial entry noremap <silent> <Leader> :Shortcuts<Return>
+  Shortcut fallback to shortcut menu on partial entry noremap <silent> <LocalLeader> :Shortcuts<Return>
 endif
-
-Shortcut CtrlP nnoremap <Leader>p :CtrlP<CR>
-Shortcut CtrlPBuffer nnoremap <Leader>ob :CtrlPBuffer
-Shortcut CtrlSpace nnoremap <Leader><Space> :CtrlSpace<CR>
-Shortcut TagbarToggle nnoremap <Leader>. :TagbarToggle<CR>
 
 " deletes into an empty buffer
 nnoremap <Leader>d "_d
@@ -25,22 +20,22 @@ command! -bang -nargs=* GGrep
   \   'git grep --line-number '.shellescape(<q-args>), 0,
   \   fzf#vim#with_preview({ 'dir': systemlist('git rev-parse --show-toplevel')[0] }), <bang>0)
 
-Shortcut Find in project nnoremap <Leader>e :GGrep <c-r><c-w><CR>
-Shortcut NERDTreeToggle nnoremap <Leader>T :NERDTreeToggle<CR>
-Shortcut NERDTreeFind nnoremap <Leader>t :NERDTreeFind<CR>
-Shortcut NERDTreeFind nnoremap <Leader>t :NERDTreeFind<CR>
+"Shortcut Find in project nnoremap <Leader>e :GGrep <c-r><c-w><CR>
+"Shortcut NERDTreeToggle nnoremap <Leader>T :NERDTreeToggle<CR>
+"Shortcut NERDTreeFind nnoremap <Leader>t :NERDTreeFind<CR>
+"Shortcut NERDTreeFind nnoremap <Leader>t :NERDTreeFind<CR>
 
-func IsNERDTreeOpen()
-    return exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
-endfunc
+"func IsNERDTreeOpen()
+"    return exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
+"endfunc
 
-func NERDToggleOrFind()
-	if IsNERDTreeOpen()
-		:NERDTreeToggle<CR>
-	else 
-		:NERDTreeFind<CR>
-	endif
-endfunc
+"func NERDToggleOrFind()
+"	if IsNERDTreeOpen()
+"		:NERDTreeToggle<CR>
+"	else 
+"		:NERDTreeFind<CR>
+"	endif
+"endfunc
 
 Shortcut Filename inoremap <Leader>fn <c-r>=expand("%:t")<cr>
 
@@ -48,7 +43,7 @@ let g:swoopUseDefaultKeyMap = 0
 Shortcut swoop 
  \ nmap <Leader>s :call Swoop()<CR>
 Shortcut swoop selection 
- \ vmap <Leader>s :call SwoopSelection()<CR>
+\ vmap <Leader>s :call SwoopSelection()<CR>
 Shortcut swoop multi
  \ nmap <Leader>ms :call SwoopMulti()<CR>
 Shortcut swoop multi selection 

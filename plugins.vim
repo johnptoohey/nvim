@@ -80,7 +80,7 @@ Plug 'christoomey/vim-tmux-runner'
 """ tpope
 Plug 'tpope/vim-surround'          " Operate on surrounding 
 Plug 'tpope/vim-speeddating'       " Increment dates
-Plug 'tpope/vim-repeat'            " Repeat plugins
+            \slug 'tpope/vim-repeat'            " Repeat plugins
 Plug 'tpope/vim-commentary'        " Comment out blocks
 Plug 'tpope/vim-abolish'           " Flexible search
 Plug 'tpope/vim-jdaddy'            " JSON text object
@@ -121,6 +121,7 @@ Plug 'freeo/vim-kalisi' " theme
 Plug 'altercation/vim-colors-solarized' " theme
 Plug 'itchyny/lightline.vim' " status across bottom
 Plug 'fxn/vim-monochrome' " theme
+Plug 'mhartington/oceanic-next'
 Plug 'kcsongor/vim-monochrome-light' " theme
 Plug 'itchyny/vim-cursorword' " underline word under cursor
 Plug 'drewtempelmeyer/palenight.vim'

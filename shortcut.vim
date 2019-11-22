@@ -58,7 +58,7 @@ function! ShortcutTypeaheadInput()
   while 1
     let c = getchar(0)
     if c == 0
-      break
+,     break
     endif
     let chars .= nr2char(c)
   endwhile
