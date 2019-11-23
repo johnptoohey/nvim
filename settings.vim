@@ -96,7 +96,7 @@ set number relativenumber
 set hlsearch
 set incsearch
 "set gdefault " treat :s// as :s//g (and vice versa)
-"set smartcase " treat all-lower as case-insensitive while searching
+set smartcase " treat all-lower as case-insensitive while searching
 set title
 
 "set clipboard^=unnamed
